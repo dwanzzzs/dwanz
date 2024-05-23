@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width-device-width,
+        initial-scale=1.0" />
+        <title>My Portofolio</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <style>
+        body {
+            
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #About-me h4 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #About-me p {
+            font-size: 16px;
+        }
+
+        #About-me .foto img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #About-me .desc {
+            margin-top: 20px;
+        }
+
+        #About-me .social {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #About-me .social a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            #About-me .desc {
+                text-align: center;
+            }
+
+            #About-me .foto img {
+                max-width: 80%;
+            }
+        }
+        nav {
+            background-color: #6F4E37;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .logo img {
+            width: 80px; /* Lebar logo */
+            height: auto; /* Tinggi disesuaikan agar proporsional */
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links li {
+            margin: 0 10px;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 12px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background-color: #6F4E37;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+            .nav-links li {
+                margin: 10px 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <img src="images/dn.png" alt="Logo DN">
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+</nav>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+
+        <header>
+            <div class="header-opacity"></div>
+            <div class="header-jumbotron">
+                <h4>Welcome</h4>
+                <h5>Hi My Name Is Dwanz<br />See more about me</h5>
+                <a href="about.html" class="button button-xl">Click Here</a>
+            </div>
+        </header>
+
+        <section id="statistic">
+            <div class="wrapper">
+                
+                <div>
+                    <p><i class="fa-brands fa-html5"></i></p>
+                    
+                </div>
+                <div>
+                    <p><i class="fa-brands fa-css3-alt"></i></p>
+                    
+                </div>
+                <div>
+                    <p><i class="fa-brands fa-js"></i></p>
+                </div>
+                <div>
+                    <p><i class="fa-brands fa-php"></i></p>
+                </div>
+        </section>
+
+        <section id="About-me">
+            <div class="wrapper">
+                <h4>About me</h4>
+                <p>Hello,</p>
+                <div>
+                    <div class="foto"><img src="images/coding.jpg"/></div>
+                    <div class="desc">
+                        <p>I'm Muhammad Riduan, a student at Samarinda State Polytechnic.I am a junior web developer.</p>
+                        <p>the programming I use HTML, CSS, JS and the framework is Laravel, Code Igniter</p>
+                        <p>i like doing new things</p>
+                    <div class="social">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
